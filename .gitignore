@@ -1,0 +1,6 @@
+node_modules
+fotos/*
+!fotos/.gitkeep
+site/gallery/thumbs
+site/gallery/web
+site/gallery/manifest.json
