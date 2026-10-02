@@ -67,11 +67,11 @@ export async function generateVideo({ photoUrls, bgUrl, secondsPerPhoto = 2.5, o
     b.drawImage(bmp, sx, sy, sw, sh, 0, 0, W, H);
     bmp.close();
     const g = b.createLinearGradient(0, 0, 0, H);
-    g.addColorStop(0, 'rgba(8,6,2,.58)'); g.addColorStop(.45, 'rgba(8,6,2,.30)'); g.addColorStop(1, 'rgba(8,6,2,.62)');
+    g.addColorStop(0, 'rgba(31,42,60,.58)'); g.addColorStop(.45, 'rgba(31,42,60,.30)'); g.addColorStop(1, 'rgba(31,42,60,.62)');
     b.fillStyle = g; b.fillRect(0, 0, W, H);
 
     b.save();
-    b.fillStyle = '#dffff5'; b.textAlign = 'center'; b.textBaseline = 'alphabetic';
+    b.fillStyle = '#fcfcfb'; b.textAlign = 'center'; b.textBaseline = 'alphabetic';
     b.shadowColor = 'rgba(0,0,0,.45)'; b.shadowBlur = 24; b.shadowOffsetY = 4;
     let size = 112;
     b.font = `700 ${size}px ${FONT}`;
@@ -83,7 +83,7 @@ export async function generateVideo({ photoUrls, bgUrl, secondsPerPhoto = 2.5, o
     b.restore();
 
     b.save();
-    b.fillStyle = '#dffff5'; b.textAlign = 'center';
+    b.fillStyle = '#fcfcfb'; b.textAlign = 'center';
     b.shadowColor = 'rgba(0,0,0,.45)'; b.shadowBlur = 20;
     b.font = `500 58px ${FONT}`;
     b.fillText(VIDEO.date, W / 2, 365);
@@ -120,7 +120,7 @@ export async function generateVideo({ photoUrls, bgUrl, secondsPerPhoto = 2.5, o
     ctx.save();
     ctx.shadowColor = 'rgba(0,0,0,.45)'; ctx.shadowBlur = 70; ctx.shadowOffsetY = 18;
     roundedRect(ctx, rx, ry, rw, rh, VIDEO.rectRadius);
-    ctx.fillStyle = '#e0fffd'; ctx.fill();
+    ctx.fillStyle = '#fcfcfb'; ctx.fill();
     ctx.restore();
 
     ctx.save();
